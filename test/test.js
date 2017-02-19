@@ -7,7 +7,7 @@ describe("Prime number constructor", function(){
 
     var test = new app.init(3)
 
-    console.log("test constructor", test)
+    // console.log("test constructor", test)
 
     describe("#Prime()", function(){
         it("should set limit", function(){

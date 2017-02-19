@@ -63,13 +63,13 @@ Prime.prototype.multiplicationTable = function(){
     }
 }
 
-// var test = new Prime(30)
+var test = new Prime(30)
 
-// console.log(test.findPrimes())
-// console.log(test.multiplicationTable())
+console.log(test.findPrimes())
+console.log(test.multiplicationTable())
 
 var exports = module.exports = {
-    init: Prime,
+    init: Prime
 }
 
-console.log(exports)
+// console.log(exports)
