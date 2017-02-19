@@ -49,16 +49,11 @@ Prime.prototype.multiplicationTable = function(){
 
     var result = matrix(this.numList)
 
-    // console.log(result)
-    console.table(result)
-
-    for(var i=0; i<result.length; i++){
-        console.log(result[i])
-    }
+    console.log("multiplication Table \n" ,result)
     
 }
 
-
+//helper method to create multiplication table
 function matrix(args){
 
     var temp = [1]
@@ -88,9 +83,8 @@ function matrix(args){
 
 var test = new Prime(30)
 
-// console.log(test.findPrimes())
-// console.log(test.multiplicationTable())
 var x = test.findPrimes()
+console.log("prime numbers list ", x)
 var y = test.multiplicationTable(x)
 
 // console.log("multiplication table ", y)
@@ -98,5 +92,3 @@ var y = test.multiplicationTable(x)
 var exports = module.exports = {
     init: Prime
 }
-
-// console.log(exports)
