@@ -3,6 +3,7 @@ function Prime(limit){
 
     this.numList = []
     this.limit = limit
+    this.multiTable = []
 }
 
 
@@ -46,10 +47,10 @@ Prime.prototype.findPrimes = function(){
 
 Prime.prototype.multiplicationTable = function(){
 
+    //call helper function
+    this.multiTable = matrix(this.numList)
 
-    var result = matrix(this.numList)
-
-    console.log("multiplication Table \n" ,result)
+    return this.multiTable
     
 }
 
@@ -75,20 +76,23 @@ function matrix(args){
         arr.push(arrMultiply);
     }
 
+    //set placehlder for multiplication
     arr[0][0] = -1;
 
     return arr;
 }
 
 
-var test = new Prime(30)
+var test = new Prime(10)
 
 var x = test.findPrimes()
 console.log("prime numbers list ", x)
 var y = test.multiplicationTable(x)
 
-// console.log("multiplication table ", y)
+console.log("multiplication table \n", y)
 
+
+//export as module
 var exports = module.exports = {
     init: Prime
 }

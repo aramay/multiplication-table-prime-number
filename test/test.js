@@ -25,9 +25,10 @@ describe("Prime number constructor", function(){
     describe("#findPrimes()", function(){
         it("should contain list of primes in the given limit", function(){
 
-            var newTest = new app.init(10)
-            // console.log("newTest ", newTest)
-            expect(newTest.findPrimes()).to.deep.equal([2,3,5,7])
+            var test2 = new app.init(10)
+            // console.log("test2 ", test2)
+            expect(test2.findPrimes()).to.deep.equal([2,3,5,7])
         })
     })
+    
 })
