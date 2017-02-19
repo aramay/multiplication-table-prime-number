@@ -46,27 +46,54 @@ Prime.prototype.findPrimes = function(){
 
 Prime.prototype.multiplicationTable = function(){
 
-    console.log("multi ", this.numList)
 
-    var list = this.numList
+    var result = matrix(this.numList)
 
-    for(var i=0; i<list.length; i++){
+    // console.log(result)
+    console.table(result)
 
-        var prime = list[i]
-
-        for(var product=1; product<=10; product++){
-
-            console.log(prime + " x " + product + " = " + prime*product)
-            
-        }
-        console.log("*************")
+    for(var i=0; i<result.length; i++){
+        console.log(result[i])
     }
+    
 }
+
+
+function matrix(args){
+
+    var temp = [1]
+
+    for(var i=0; i<args.length; i++){
+        // temp[0] = 1
+        temp.push(args[i])
+    }
+
+    var arr = [];
+    arr.push(temp);
+    // Creates all lines:
+    for(var i=1; i < temp.length; i++){
+        var arrMultiply = [];
+
+        for(var j=0; j < temp.length; j++){
+            arrMultiply.push(temp[i]*temp[j]);
+        }
+        arr.push(arrMultiply);
+    }
+
+    arr[0][0] = -1;
+
+    return arr;
+}
+
 
 var test = new Prime(30)
 
-console.log(test.findPrimes())
-console.log(test.multiplicationTable())
+// console.log(test.findPrimes())
+// console.log(test.multiplicationTable())
+var x = test.findPrimes()
+var y = test.multiplicationTable(x)
+
+// console.log("multiplication table ", y)
 
 var exports = module.exports = {
     init: Prime
