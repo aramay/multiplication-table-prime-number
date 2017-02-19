@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aramay/multiplication-table-prime-number/"
+  },
   "author": "aramay",
   "license": "MIT",
   "devDependencies": {

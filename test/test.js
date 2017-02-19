@@ -5,7 +5,7 @@ var app = require('../app.js')
 
 describe("Prime number constructor", function(){
 
-    var test = new app._test.init(3)
+    var test = new app.init(3)
 
     console.log("test constructor", test)
 
@@ -25,7 +25,7 @@ describe("Prime number constructor", function(){
     describe("#findPrimes()", function(){
         it("should contain list of primes in the given limit", function(){
 
-            var newTest = new app._test.init(10)
+            var newTest = new app.init(10)
             // console.log("newTest ", newTest)
             expect(newTest.findPrimes()).to.deep.equal([2,3,5,7])
         })
