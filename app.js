@@ -83,7 +83,7 @@ function matrix(args){
 }
 
 
-var test = new Prime(10)
+var test = new Prime(30)
 
 var x = test.findPrimes()
 console.log("prime numbers list ", x)
